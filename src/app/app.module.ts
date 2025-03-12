@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router'; // <-- Import this!
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ModifyComponent } from './components/modify/modify.component';
 import { ListComponent } from './components/list/list.component';

@@ -1,7 +1,28 @@
-<form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
-  <label>Title:</label>
-  <input formControlName="title" required>
-  <label>Description:</label>
-  <input formControlName="description" required>
-  <button type="submit">{{ editMode ? 'Update' : 'Add' }} Item</button>
-</form>
+<div class="container mt-4">
+  <h2 class="text-center">{{ editMode ? '📝 Edit Item' : '➕ Add New Item' }}</h2>
+
+  <div class="card shadow p-4 bg-light">
+    <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Title:</label>
+        <input type="text" class="form-control" formControlName="title" placeholder="Enter item title" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Description:</label>
+        <input type="text" class="form-control" formControlName="description" placeholder="Enter item description" required>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-100">
+          {{ editMode ? '💾 Update' : '✔ Add' }} Item
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="text-center mt-3">
+    <a routerLink="/list" class="btn btn-secondary">🔙 Back to List</a>
+  </div>
+</div>
