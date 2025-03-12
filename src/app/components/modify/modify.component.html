@@ -1,0 +1,7 @@
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+  <label>Title:</label>
+  <input formControlName="title" required>
+  <label>Description:</label>
+  <input formControlName="description" required>
+  <button type="submit">{{ editMode ? 'Update' : 'Add' }} Item</button>
+</form>

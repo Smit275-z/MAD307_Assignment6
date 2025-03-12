@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let item of items">
+    {{ item.title }} - {{ item.description }}
+    <button (click)="editItem(item.id)">Edit</button>
+    <button (click)="deleteItem(item.id)">Delete</button>
+  </li>
+</ul>
+<a routerLink="/modify">Add New Item</a>
